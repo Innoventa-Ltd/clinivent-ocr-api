@@ -10,8 +10,6 @@ deployment:
 
     - /bin/cp -R app/* $APPPATH/app
 
-    # install dependencies in correct virtualenv (FIX THIS PATH if different)
-    - /home/trennguq/virtualenv/repositories/clinivent-ocr-api/3.13/bin/pip install -r $APPPATH/requirements.txt
+    - /home/trennguq/repositories/clinivent-ocr-api/3.13/bin/pip install -r $APPPATH/requirements.txt
 
-    # restart Python app
     - /usr/bin/touch /home/trennguq/tmp/restart.txt
