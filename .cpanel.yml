@@ -1,0 +1,14 @@
+---
+deployment:
+  tasks:
+    - export APPPATH=	/home2/theoasis/repositories/clinivent-ocr-api
+    - /bin/mkdir -p $APPPATH/app
+
+    - /bin/cp passenger_wsgi.py $APPPATH
+    - /bin/cp requirements.txt $APPPATH
+
+    - /bin/cp -R app/* $APPPATH/app
+
+    - source /home2/theoasis/virtualenv/myfastapiapp/3.11/bin/activate && pip install -r $APPPATH/requirements.txt
+
+    - /usr/bin/touch /home2/theoasis/tmp/restart.txt
