@@ -9,7 +9,6 @@ deployment:
     - /bin/cp requirements.txt $APPPATH
 
     - /bin/cp -R app/* $APPPATH/app
-
     - /home/trennguq/repositories/clinivent-ocr-api/3.13/bin/pip install -r $APPPATH/requirements.txt
 
     - /usr/bin/touch /home/trennguq/tmp/restart.txt
